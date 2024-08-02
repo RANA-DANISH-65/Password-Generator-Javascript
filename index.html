@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <!-- Linking the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Importing Google Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+
+    <!-- Main container for the password generator -->
+    <div class="container">
+        <!-- Title of the password generator -->
+        <h1>Password Generator</h1>
+    
+        <!-- Password display section -->
+        <div class="password">
+            <!-- Password display input box (disabled for direct input) -->
+            <input type="text" class="passbox" id="passbox" disabled>
+            <!-- Copy icon for copying the generated password -->
+            <span class="material-symbols-outlined icon" id="copyicon">
+                content_copy
+            </span>
+        </div>
+
+        <!-- Slider for selecting password length -->
+        <input type="range" min="4" max="20" value="8" id="inputslider">
+        <div class="passlength">
+            <span>Password Length</span>
+            <!-- Displaying the selected password length -->
+            <span id="passlength">8</span>
+        </div>
+
+        <!-- Option to include lowercase letters in the password -->
+        <div class="row">
+            <label for="lowercase">Include Lowercase Letters (a-z)</label>
+            <input type="checkbox" name="lowercase" id="lowercase" checked/>
+        </div>
+
+        <!-- Option to include uppercase letters in the password -->
+        <div class="row">
+            <label for="uppercase">Include Uppercase Letters (A-Z)</label>
+            <input type="checkbox" name="uppercase" id="uppercase" checked/>
+        </div>
+
+        <!-- Option to include numbers in the password -->
+        <div class="row">
+            <label for="numbers">Include Numbers (0-9)</label>
+            <input type="checkbox" name="numbers" id="numbers" checked/>
+        </div>
+
+        <!-- Option to include symbols in the password -->
+        <div class="row">
+            <label for="symbols">Include Symbols (!-*)</label>
+            <input type="checkbox" name="symbols" id="symbols" checked/>
+        </div>
+           
+        <!-- Button to generate the password -->
+        <button id="genbtn">Generate Password</button>
+    </div>
+
+    <!-- Linking the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
